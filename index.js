@@ -1,7 +1,6 @@
 const express = require("express");
 const { MongoClient } = require('mongodb');
 const app = express();
-const axios = require('axios');
 
 // MongoDB bağlantı URL'si
 const mongoUri = 'mongodb://localhost:27017'; // Yerel MongoDB için
@@ -43,29 +42,34 @@ app.get('/flights', async (req, res) => {
 
 // Uçuşları arama
 app.get('/search-flights', async (req, res) => {
-    const { date1, date2, hours1, hours2 } = req.query;
-
-    console.log(`Başlangıç Tarihi: ${date1}`);
-    console.log(`Bitiş Tarihi: ${date2}`);
-    console.log(`Başlangıç Saati: ${hours1}`);
-    console.log(`Bitiş Saati: ${hours2}`);
+    const { startDate, endDate, hours1, hours2 } = req.query;
 
     try {
         const client = await connectToMongoDB();
         const db = client.db(dbName);
         const flightsCollection = db.collection('flights');
 
-        const query = {};
+        // Başlangıç ve bitiş tarih/saatleri oluştur
+        const startDateTime = new Date(`${startDate}T${hours1}`);
+        const endDateTime = new Date(`${endDate}T${hours2}`);
 
-        // Tarih ve saat aralığı için sorgu oluşturma
-        if (date1 && date2 && hours1 && hours2) {
-            const startDateTime = new Date(`${date1}T${hours1}`); // Başlangıç tarihi ve saati
-            const endDateTime = new Date(`${date2}T${hours2}`); // Bitiş tarihi ve saati
-            endDateTime.setHours(endDateTime.getHours() + 1); // Bitiş zamanını bir saat ileri alarak genişletiyoruz
-
-            // Sorguyu oluşturuyoruz
-            query['scheduleDateTime'] = { $gte: startDateTime, $lt: endDateTime }; // scheduleDateTime alanını sorguluyoruz
-        }
+        // MongoDB sorgusu
+        const query = {
+            $and: [
+                { 
+                    scheduleDate: { $gte: startDateTime.toISOString().split('T')[0] } 
+                },
+                { 
+                    scheduleDate: { $lte: endDateTime.toISOString().split('T')[0] } 
+                },
+                {
+                    scheduleTime: {
+                        $gte: hours1,
+                        $lte: hours2
+                    }
+                }
+            ]
+        };
 
         // MongoDB sorgusuyla uçuşları bulma
         const flights = await flightsCollection.find(query).toArray();
@@ -84,32 +88,7 @@ app.get('/search-flights', async (req, res) => {
 });
 
 
-// Rezervasyon yapma
-app.post('/reserve-flight', async (req, res) => {
-    const flightData = req.body;
 
-    // Geçmiş tarihe rezervasyon yapılmaması kontrolü
-    const departureDate = new Date(flightData.departureDate);
-    if (departureDate < new Date()) {
-        return res.status(400).send("Geçmiş tarihli uçuşlar için rezervasyon yapamazsınız.");
-    }
-
-    try {
-        const client = await connectToMongoDB();
-        const db = client.db(dbName);
-        const flightsCollection = db.collection('flights');
-
-        // Rezervasyonu MongoDB'ye kaydetme
-        await flightsCollection.insertOne(flightData);
-        console.log('Uçuş rezervasyonu başarıyla kaydedildi!');
-
-        await client.close();
-        res.redirect("/my-flights"); // Kullanıcıyı uçuşlarım sayfasına yönlendir
-    } catch (error) {
-        console.error('Rezervasyon kaydetme hatası:', error);
-        res.status(500).send('Rezervasyon kaydedilirken bir hata oluştu.');
-    }
-});
 
 // Kullanıcının rezervasyonlarını görüntüleme
 app.get('/my-flights', async (req, res) => {
