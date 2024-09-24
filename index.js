@@ -43,10 +43,12 @@ app.get('/flights', async (req, res) => {
 
 // Uçuşları arama
 app.get('/search-flights', async (req, res) => {
-    const { departureHour, departureDate } = req.query;
+    const { date1, date2, hours1, hours2 } = req.query;
 
-    console.log(`Departure Hour: ${departureHour}`);
-    console.log(`Departure Date: ${departureDate}`);
+    console.log(`Başlangıç Tarihi: ${date1}`);
+    console.log(`Bitiş Tarihi: ${date2}`);
+    console.log(`Başlangıç Saati: ${hours1}`);
+    console.log(`Bitiş Saati: ${hours2}`);
 
     try {
         const client = await connectToMongoDB();
@@ -55,11 +57,14 @@ app.get('/search-flights', async (req, res) => {
 
         const query = {};
 
-        // Sadece kalkış tarihi ve saati için sorgu oluşturma
-        if (departureDate && departureHour) {
-            const departureStart = new Date(`${departureDate}T${departureHour}:00Z`);
-            const departureEnd = new Date(`${departureDate}T${departureHour}:59Z`); // 59. saniyeye kadar olan uçuşları dahil et
-            query['scheduleDateTime'] = { $gte: departureStart, $lt: departureEnd };
+        // Tarih ve saat aralığı için sorgu oluşturma
+        if (date1 && date2 && hours1 && hours2) {
+            const startDateTime = new Date(`${date1}T${hours1}`); // Başlangıç tarihi ve saati
+            const endDateTime = new Date(`${date2}T${hours2}`); // Bitiş tarihi ve saati
+            endDateTime.setHours(endDateTime.getHours() + 1); // Bitiş zamanını bir saat ileri alarak genişletiyoruz
+
+            // Sorguyu oluşturuyoruz
+            query['scheduleDateTime'] = { $gte: startDateTime, $lt: endDateTime }; // scheduleDateTime alanını sorguluyoruz
         }
 
         // MongoDB sorgusuyla uçuşları bulma
@@ -68,7 +73,7 @@ app.get('/search-flights', async (req, res) => {
         if (flights.length > 0) {
             res.render('flights', { flights });
         } else {
-            res.render('flights', { flights: [], message: 'Belirtilen kriterlere göre uçuş bulunamadı.' });
+            res.render('flights', { flights: [], message: 'Belirtilen tarih ve saat aralığında uçuş bulunamadı.' });
         }
 
         await client.close(); // MongoDB bağlantısını kapat
@@ -77,6 +82,7 @@ app.get('/search-flights', async (req, res) => {
         res.status(500).send('Uçuşları ararken bir hata oluştu.');
     }
 });
+
 
 // Rezervasyon yapma
 app.post('/reserve-flight', async (req, res) => {
