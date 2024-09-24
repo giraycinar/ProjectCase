@@ -37,6 +37,9 @@ Bu uygulama, uçuş rezervasyonu yapmaya yönelik bir web uygulamasıdır. Kulla
 ![HomePage ekranı](Ss/Home.png)
 ![MongoDB](Ss/Mongo.png)
 ![Vscode kodlar](Ss/Vscode.png)
-![Video](Ss/FlightVideo.mp4)
+
+### Video
+- Videoda Ss klasörü içerisinde mevcuttur.
+![FlightVideo](Ss/FlightVideo.mp4)
 
 
