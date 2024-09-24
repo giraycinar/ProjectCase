@@ -30,11 +30,13 @@ Bu uygulama, uçuş rezervasyonu yapmaya yönelik bir web uygulamasıdır. Kulla
 
 ## Uygulama görüntüleri ve videoları
 ## Ekran Görüntüleri
-![Docker üzerinde çalışması](../Ss/Docker.png)
-![Flight Ekranı](../Ss/Flight.png)
-![HomePage ekranı](../Ss/Home.png)
-![MongoDB](../Ss/Mongo.png)
-![Vscode kodlar](../Ss/Vscode.png)
-![Video](../Ss/FlightVideo.mp4)
+- Ekran görüntüleri Ss klasörü içerisindedir.
+
+![Docker üzerinde çalışması](Ss/Docker.png)
+![Flight Ekranı](Ss/Flight.png)
+![HomePage ekranı](Ss/Home.png)
+![MongoDB](Ss/Mongo.png)
+![Vscode kodlar](Ss/Vscode.png)
+![Video](Ss/FlightVideo.mp4)
 
 
