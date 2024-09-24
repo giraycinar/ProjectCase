@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/css/flight.css">
+
+    <style>
+        body {
+            background-color: #f0f4f8; /* Açık gri */
+        }
+        .navbar {
+            background-color: rgba(0, 123, 255, 0.8); /* Transparan mavi renk */
+            backdrop-filter: blur(10px); /* Arka plan bulanıklığı */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
+        }
+        .navbar .nav-link {
+            color: white; /* Yazı rengi beyaz */
+            border-radius: 20px; /* Yumuşak kenarlar */
+            padding: 10px 15px; /* İçerik için biraz alan */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Geçiş efekti */
+        }
+        .navbar .nav-link:hover {
+            background-color: rgba(0, 86, 179, 0.7); /* Koyu mavi hover efekti */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover'da gölge ekle */
+        }
+        .flight-card {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff; /* Beyaz */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex; /* Flexbox kullanarak düzenleme */
+            justify-content: space-between; /* Alanları dağıt */
+            align-items: center; /* Dikey merkezleme */
+        }
+        .flight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .flight-icon {
+            font-size: 50px;
+            color: #007bff; /* Mavi tonları */
+            margin-right: 15px;
+        }
+        .flight-info {
+            display: flex;
+            align-items: center;
+            flex-direction: column; /* Dikey hizalama */
+            text-align: center; /* Ortalanmış yazı */
+        }
+        .route {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #333; /* Koyu gri */
+            margin: 10px 0; /* Üst ve alt aralığı */
+        }
+        .scheduled-time {
+            font-size: 1.2rem;
+            color: #6c757d; /* Gri */
+        }
+        .flight-details {
+            margin: 10px 0; /* Üst ve alt aralığı */
+            font-size: 1.2rem; /* Yazı boyutu */
+        }
+        .price-options {
+            margin-left: auto; /* Fiyatları sağa yasla */
+        }
+        .price-option {
+            display: block; /* Block yaparak alt alta diz */
+            margin-bottom: 5px; /* Aralık ekle */
+            padding: 10px 20px; /* Daha fazla alan ekle */
+            border: 1px solid #646464; /* Siyah kenarlık */
+            border-radius: 5px; /* Yumuşak kenarlar */
+            background-color: #fff; /* Beyaz arka plan */
+            color: #646464; /* Siyah yazı */
+            font-weight: bold; /* Kalın yazı */
+            text-align: center; /* Ortalanmış yazı */
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Gölge geçişi */
+        }
+        .price-option:hover {
+            background-color: #646464; /* Siyah arka plan */
+            color: white; /* Beyaz yazı */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Hover'da gölge ekle */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">Flight App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/flights">Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Times</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Stops</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Airlines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Airports</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Amenities</a>
+                </li>
+            </ul>
+            <form class="form-inline ml-auto">
+                <input class="form-control mr-2" type="search" placeholder="Edit Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="mt-4">Flights List</h1>
+        <div class="row">
+            <% if (flights.length === 0) { %>
+                <p>No flights available at this time.</p>
+            <% } else { %>
+                <% flights.forEach(flight => { %>
+                    <div class="col-md-12">
+                        <div class="flight-card">
+                            <div class="flight-info">
+                                <i class="fas fa-plane-departure flight-icon"></i>
+                                <span class="route">
+                                    <% 
+                                    const originIata = flight.route && flight.route.origin && flight.route.origin.iata ? flight.route.origin.iata : 'N/A'; 
+                                    const destinationIata = flight.route && flight.route.destination && flight.route.destination.iata ? flight.route.destination.iata : 'N/A';
+                                    %>
+                                    <%= originIata %> &rarr; <%= destinationIata %>
+                                </span>
+                                <p class="scheduled-time">
+                                    <strong>Kalkış:</strong> <%= flight.scheduleTime || 'N/A' %> <br>
+                                    <strong>İniş:</strong> <%= flight.arrivalTime || 'N/A' %>
+                                </p>
+                            </div>
+                            
+                            <div class="flight-details">
+                                <span class="price-option">flight-details</span>
+                                <p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16">
+                                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"/>
+                                    </svg>
+                                </p>
+                                <strong style="color: #646464;">Havayolu:</strong> <%= flight.airline || 'N/A' %> <br>
+                                <strong style="color: #646464;">Uçuş Süresi:</strong> <%= flight.nonStopDuration || 'N/A' %>
+                            </div>
+                            <div class="price-options">
+                                <span class="price-option">First: $500</span>
+                                <span class="price-option">Main: $300</span>
+                                <span class="price-option">Comfort: $200</span>
+                                <span class="price-option">Business: $400</span>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } %>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

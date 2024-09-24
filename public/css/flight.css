@@ -1,0 +1,19 @@
+.flight-details {
+    margin: 10px 0; /* Üst ve alt aralığı */
+    font-size: 1.2rem; /* Yazı boyutu */
+    text-align: center; /* Yazıyı sağa yasla */
+    width: 70%; /* Tüm genişliği kullan */
+}
+.price-option {
+    display: inline-block; /* Buton gibi davranması için */
+    margin-bottom: 5px; /* Alt aralık */
+    padding: 5px 10px; /* İçerik alanı */
+    border: 1px solid #646464; /* Kenarlık */
+    border-radius: 5px; /* Yumuşak kenarlar */
+    background-color: #fff; /* Beyaz arka plan */
+    color: #646464; /* Yazı rengi */
+    font-weight: bold; /* Kalın yazı */
+    font-size: 0.9rem; /* Daha küçük yazı boyutu */
+    text-align: center; /* Ortalanmış yazı */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Gölge geçişi */
+}

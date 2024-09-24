@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Document</title>
+</head>
+<body>
+ 
+    <div class="container" >
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg" style="background-color: rgb(240, 244, 247);">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(93, 10, 172);" width="16" height="16" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                    <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849"/>
+                  </svg> PLANE SCAPE</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"> <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(93, 10, 172);" width="16" height="16" fill="currentColor" class="bi bi-tag-fill" viewBox="0 0 16 16">
+                                <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+                              </svg> Deals</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(93, 10, 172);" width="16" height="16" fill="currentColor" class="bi bi-globe-americas" viewBox="0 0 16 16">
+                                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
+                              </svg> Discover</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Another Items
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search"  >
+                        <button class="btn btn-outline-success"  type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                          </svg></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- 2 Sütunlu İçerik -->
+        <div class="row mt-4">
+            <!-- Birinci Sütun (3 Satır) -->
+            <div class="col-md-9">
+                <!-- İlk Satır -->
+                <div class="row">
+                    <div class="col-10 " style="background-color: rgb(249, 254, 255); height: 200px; width: 97%; border-radius: 13px;">
+                        <div>
+                            <h5> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16">
+                                <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"/>
+                              </svg> BOOK YOUR FLİGHT</h5>
+
+                                   <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                       <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                         <label class="btn" for="btnradio1">Round Trip</label>
+
+                                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                      <label class="btn" for="btnradio3">One Way</label>
+                                      </div>
+
+                              
+
+                                      <form id="search-form" action="/search-flights" method="GET">
+                                        <div class="row g-3 margin-bottom">
+                                            <div class="col">
+                                                <input type="time" name="departureHour" class="form-control" placeholder="Departure Hour" aria-label="Hour" required>
+                                            </div>
+                                            <div class="col">
+                                                <input type="time" name="landingHour" class="form-control" placeholder="Landing Hour" aria-label="Hour" required>
+                                            </div>
+                                        </div>
+                                        
+                                    
+                                        <div class="row g-3 margin-bottom">
+                                            <div class="col">
+                                                <input type="date" name="departureDate" class="form-control" placeholder="Departure Date" aria-label="Date" required>
+                                            </div>
+                                            <div class="col">
+                                                <input type="date" name="landingDate" class="form-control" placeholder="Landing Date" aria-label="Date" required>
+                                            </div>
+                                        </div>
+                                    
+                                        <button type="submit" class="btn btn-primary">Search Flights</button>
+                                    </form>
+                                    
+                                    
+                                    
+                                    <!-- Show Flights Butonu -->
+                                    <p></p>
+                                    <button type="button" class="btn btn-dark" 
+                                            style="background-color: transparent; border-color: rgb(93, 10, 172); color: rgb(93, 10, 172); --bs-btn-padding-y: .30rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .90rem;"
+                                            onmouseover="this.style.backgroundColor='rgba(93, 10, 172, 0.2)';"
+                                            onmouseout="this.style.backgroundColor='transparent';"
+                                            onmousedown="this.style.backgroundColor='rgb(93, 10, 172)';"
+                                            onmouseup="this.style.backgroundColor='rgba(93, 10, 172, 0.2)';"
+                                            onclick="showFlights()">
+                                        Show All Flights
+                                    </button>
+                                    
+                        
+                        <script>
+                            function showFlights() {
+                                window.location.href = 'http://127.0.0.1:3000/flights'; // Butona tıklandığında yönlendirme
+                            }
+                        </script>
+                        
+                    
+                        
+                        
+                        
+                        
+                        <p> </p>
+                        <h6 style="margin-left: 85%;">Arrival Time</h6>
+                        <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Non-Stop
+                            </label>
+                          </div>
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              1 Stop
+                            </label>
+                          </div>
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              2+ Stop'
+                            </label>
+                          </div>
+                          <p> </p>
+                          <h6 style="margin-left: 85%;">Sort By</h6>
+
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Lowest Price
+                            </label>
+                          </div>
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              1st Class
+                            </label>
+                          </div>
+                          <p> </p>
+                          <p> </p>
+
+                          <h6 style="margin-left: 85%;">Airlines Included </h6>
+
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Air Italy
+                            </label>
+                          </div>
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Turkish Airways
+                            </label>
+                          </div>
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Qatar Airways
+                            </label>
+                          </div>
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Air France
+                            </label>
+                          </div>
+                          <div class="form-check" style="margin-left: 85%;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Siberia
+                            </label>
+                          </div>
+                          <div class="form-check" style="margin-left: 85%;" >
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Others
+                            </label>
+                          </div>
+                          <button type="button" class="btn btn-dark"  style="margin-left: 85%; margin-top: 10px;"
+                          style="background-color: transparent; border-color: rgb(93, 10, 172); color: rgb(93, 10, 172); --bs-btn-padding-y: .30rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .90rem;"
+                          onmouseover="this.style.backgroundColor='rgba(93, 10, 172, 0.2)';"
+                          onmouseout="this.style.backgroundColor='transparent';"
+                          onmousedown="this.style.backgroundColor='rgb(93, 10, 172)';"
+                          onmouseup="this.style.backgroundColor='rgba(93, 10, 172, 0.2)';"
+                          >
+                      Filter
+                  </button>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                <!-- İkinci Satır -->
+                <div class="row mt-5">
+                    <div class="col-6" style="background-color: rgb(249, 254, 255); height: 200px; width: 80%; border-radius: 13px;">
+                        <!-- İçerik burada olacak -->
+                         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                          </svg>
+                        </p>
+                         
+                    </div>
+                </div>
+                <!-- Butonu burada, row'un dışında yerleştiriyoruz -->
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-dark"
+                            style="margin-top: -00px; /* Bu, butonu yukarı alır */ background-color: transparent; border-color: rgb(93, 10, 172); color: rgb(93, 10, 172); --bs-btn-padding-y: .30rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .90rem; border-radius: 8px;"
+                            onmouseover="this.style.backgroundColor='rgba(93, 10, 172, 0.2)';"
+                            onmouseout="this.style.backgroundColor='transparent';"
+                            onmousedown="this.style.backgroundColor='rgb(93, 10, 172)';"
+                            onmouseup="this.style.backgroundColor='rgba(93, 10, 172, 0.2)';">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                                <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                              </svg>  Check the details
+                        </button>
+                    </div>
+                    
+                    <div class="col-6 d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn btn-dark"
+                        style="background-color: rgb(93, 10, 172); border-color: rgb(93, 10, 172); color: white; --bs-btn-padding-y: .30rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .90rem;"
+                        onmouseover="this.style.backgroundColor='rgba(93, 10, 172, 0.7)';"
+                        onmouseout="this.style.backgroundColor='rgb(93, 10, 172)';"
+                        onmousedown="this.style.backgroundColor='rgba(93, 10, 172, 0.5)';"  
+                        onmouseup="this.style.backgroundColor='rgb(93, 10, 172)';">  <!-- Koyu mor -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-arrow-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5"/>
+                            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                          </svg>  Book Flight
+                    </button>
+                    </div>
+                </div>
+                
+    
+                <!-- Üçüncü Satır -->
+
+                <div class="row mt-4">
+                    <div class="col-6" style="background-color: rgb(249, 254, 255); height: 200px; width: 80%; border-radius: 13px;">
+                        <!-- İçerik burada olacak -->
+                         <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                            <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+                            <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+                          </svg></p>
+                    </div>
+                </div>
+                <!-- Butonu burada, row'un dışında yerleştiriyoruz -->
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-dark"
+                            style="margin-top: -00px; /* Bu, butonu yukarı alır */ background-color: transparent; border-color: rgb(93, 10, 172); color: rgb(93, 10, 172); --bs-btn-padding-y: .30rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .90rem; border-radius: 8px;"
+                            onmouseover="this.style.backgroundColor='rgba(93, 10, 172, 0.2)';"
+                            onmouseout="this.style.backgroundColor='transparent';"
+                            onmousedown="this.style.backgroundColor='rgb(93, 10, 172)';"
+                            onmouseup="this.style.backgroundColor='rgba(93, 10, 172, 0.2)';">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                                <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+                              </svg> Check the details
+                            
+                        </button>
+                        
+                        
+                    </div>
+                    <div class="col-6 d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn btn-dark"
+                        style="background-color: rgb(93, 10, 172); border-color: rgb(93, 10, 172); color: white; --bs-btn-padding-y: .30rem; --bs-btn-padding-x: .9rem; --bs-btn-font-size: .90rem;"
+                        onmouseover="this.style.backgroundColor='rgba(93, 10, 172, 0.7)';"
+                        onmouseout="this.style.backgroundColor='rgb(93, 10, 172)';"
+                        onmousedown="this.style.backgroundColor='rgba(93, 10, 172, 0.5)';"  
+                        onmouseup="this.style.backgroundColor='rgb(93, 10, 172)';">  <!-- Koyu mor -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-arrow-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 5a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 9.293V5.5A.5.5 0 0 1 8 5"/>
+                            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                          </svg>  Book Flight
+                    </button>
+                    
+                    </div>
+                </div>
+                
+                
+            </div>
+    
+            <!-- İkinci Sütun -->
+            <div class="col-md-3" style="background-color: rgb(249, 254, 255); border-radius: 13px;">
+                
+            
+                
+                <div class="image-container" style="position: relative; width: 80%; margin-top: 20px; margin-bottom: 15px;">
+                    <img src="../images/4.jpeg" style="border-radius: 10px; width: 100%; height: auto;" alt="Car Rentals">
+                    <div class="overlay" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.3); padding: 5px; border-radius: 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-car-front" viewBox="0 0 16 16">
+                            <path d="M5.5 1a1 1 0 0 0-1 1v1H2.5A1.5 1.5 0 0 0 1 4.5v1A1.5 1.5 0 0 0 2.5 7h1A1 1 0 0 0 5 6H9a1 1 0 0 0 1-1h1.5A1.5 1.5 0 0 0 14 4.5v-1A1.5 1.5 0 0 0 12.5 2H10V1a1 1 0 0 0-1-1h-3zM4.5 2h7a.5.5 0 0 1 .5.5v1h-8V2.5a.5.5 0 0 1 .5-.5zM1 5h14v2H1V5zm0 3h14v5a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-5zm2 0h10v2H3V8z"/>
+                        </svg>  
+                        CAR RENTALS
+                    </div>
+                </div>
+            
+                <div class="image-container" style="position: relative; width: 80%; margin-bottom: 15px;">
+                    <img src="../images/5.jpeg" style="border-radius: 10px; width: 100%; height: auto;" alt="Hotels">
+                    <div class="overlay" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.3); padding: 5px; border-radius: 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building-check" viewBox="0 0 16 16">
+                            <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514"/>
+                            <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1z"/>
+                            <path d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+                        </svg>  
+                        HOTELS
+                    </div>
+                </div>
+            
+                <div class="image-container" style="position: relative; width: 80%; margin-bottom: 15px;">
+                    <img src="../images/6.jpeg" style="border-radius: 10px; width: 100%; height: auto;" alt="Travel Packages">
+                    <div class="overlay" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.3); padding: 5px; border-radius: 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-luggage" viewBox="0 0 16 16">
+                            <path d="M2.5 1a.5.5 0 0 0-.5.5V5h-.5A1.5 1.5 0 0 0 0 6.5v7a1.5 1.5 0 0 0 1 1.415v.335a.75.75 0 0 0 1.5 0V15H4v-1H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5V7h1v-.5A1.5 1.5 0 0 0 6.5 5H6V1.5a.5.5 0 0 0-.5-.5zM5 5H3V2h2z"/>
+                            <path d="M3 7.5a.5.5 0 0 0-1 0v5a.5.5 0 0 0 1 0zM11 6a1.5 1.5 0 0 1 1.5 1.5V8h2A1.5 1.5 0 0 1 16 9.5v5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 14.5v-5A1.5 1.5 0 0 1 6.5 8h2v-.5A1.5 1.5 0 0 1 10 6zM9.5 7.5V8h2v-.5A.5.5 0 0 0 11 7h-1a.5.5 0 0 0-.5.5M6 9.5v5a.5.5 0 0 0 .5.5H7V9h-.5a.5.5 0 0 0-.5.5m7 5.5V9H8v6zm1.5 0a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5H14v6z"/>
+                        </svg>  
+                        TRAVEL PACKAGES
+                    </div>
+                </div>
+                <div class="image-container" style="position: relative; width: 80%; ">
+                    <img src="../images/7.jpeg" style="border-radius: 10px; width: 100%; height: auto;" alt="Hotels">
+                    <div class="overlay" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.3); padding: 5px; border-radius: 5px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                            <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.5.5 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
+                          </svg>  
+                        HISTORICAL TOURS
+                    </div>
+                </div>
+            </div>
+            
+                
+                            </div>
+            
+            
+        </div>
+    </div>
+    
+    
+
+    
+
+
+
+
+
+</body>
+</html>

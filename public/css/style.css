@@ -1,0 +1,39 @@
+body, html {
+    height: 100%;
+    margin: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 231, 255); /* Arka plan rengi */
+}
+
+.container {
+    width: 1500px;              /* Genişlik  */
+    height: 90%;            /* Sabit yükseklik */
+    background-color: rgb(240, 244, 247); /* Farklı arka plan rengi */
+    border-radius: 20px;      /* Yuvarlatılmış köşeler */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(177, 49, 209, 0.6); /* Hafif gölge efekti */
+}
+
+
+  /* Seçili butonun mor renkte olmasını sağla */
+  .btn-check:checked + .btn {
+    background-color: #6f42c1;
+    color: white;
+    border-color: #6f42c1;
+  }
+
+  /* Normal buton beyaz olsun */
+  .btn {
+    background-color: white;
+    color: #6f42c1;
+    border-color: #6f42c1;
+  }
+
+  /* Hover sırasında renk geçişi */
+  .btn:hover {
+    background-color: #6f42c1;
+    color: white;
+  }
+
