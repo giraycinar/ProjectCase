@@ -17,3 +17,83 @@
     text-align: center; /* Ortalanmış yazı */
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Gölge geçişi */
 }
+
+        .body {
+            background-color: #f0f4f8; /* Açık gri */
+        }
+        .navbar {
+            background-color: rgba(0, 123, 255, 0.8); /* Transparan mavi renk */
+            backdrop-filter: blur(10px); /* Arka plan bulanıklığı */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Gölgelendirme */
+        }
+        .navbar .nav-link {
+            color: white; /* Yazı rengi beyaz */
+            border-radius: 20px; /* Yumuşak kenarlar */
+            padding: 10px 15px; /* İçerik için biraz alan */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Geçiş efekti */
+        }
+        .navbar .nav-link:hover {
+            background-color: rgba(0, 86, 179, 0.7); /* Koyu mavi hover efekti */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Hover'da gölge ekle */
+        }
+        .flight-card {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff; /* Beyaz */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex; /* Flexbox kullanarak düzenleme */
+            justify-content: space-between; /* Alanları dağıt */
+            align-items: center; /* Dikey merkezleme */
+        }
+        .flight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        .flight-icon {
+            font-size: 50px;
+            color: #007bff; /* Mavi tonları */
+            margin-right: 15px;
+        }
+        .flight-info {
+            display: flex;
+            align-items: center;
+            flex-direction: column; /* Dikey hizalama */
+            text-align: center; /* Ortalanmış yazı */
+        }
+        .route {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #333; /* Koyu gri */
+            margin: 10px 0; /* Üst ve alt aralığı */
+        }
+        .scheduled-time {
+            font-size: 1.2rem;
+            color: #6c757d; /* Gri */
+        }
+        .flight-details {
+            margin: 10px 0; /* Üst ve alt aralığı */
+            font-size: 1.2rem; /* Yazı boyutu */
+        }
+        .price-options {
+            margin-left: auto; /* Fiyatları sağa yasla */
+        }
+        .price-option {
+            display: block; /* Block yaparak alt alta diz */
+            margin-bottom: 5px; /* Aralık ekle */
+            padding: 10px 20px; /* Daha fazla alan ekle */
+            border: 1px solid #646464; /* Siyah kenarlık */
+            border-radius: 5px; /* Yumuşak kenarlar */
+            background-color: #fff; /* Beyaz arka plan */
+            color: #646464; /* Siyah yazı */
+            font-weight: bold; /* Kalın yazı */
+            text-align: center; /* Ortalanmış yazı */
+            transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Gölge geçişi */
+        }
+        .price-option:hover {
+            background-color: #646464; /* Siyah arka plan */
+            color: white; /* Beyaz yazı */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Hover'da gölge ekle */
+        }
+    

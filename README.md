@@ -18,6 +18,7 @@ Bu uygulama, uçuş rezervasyonu yapmaya yönelik bir web uygulamasıdır. Kulla
 - Kodu kopyala
 - npm start
 - Uygulama varsayılan olarak http://localhost:3000 adresinde çalışacaktır.
+- Nodemon yüklendi. Çalıştırmak için nodemon index.js kullanılmalı.
 
 ## Kullanılan Teknolojiler
 - **Node.js**: Sunucu tarafı uygulama geliştirmek için.
